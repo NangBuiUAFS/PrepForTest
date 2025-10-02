@@ -1,0 +1,7 @@
+Compile Individual Object Modules
+gcc -c show.c -o show.o
+gcc -c sum.c -o sum.o
+
+Create static library
+ar rs libmylib.a show.o sum.Object
+gcc myprog.c -L. -lmylib -o myprog
